@@ -1,0 +1,667 @@
+/* reset */
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* scroll smooth aos links */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../media/bg3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* body */
+
+/* starting menu */
+
+body .starter {
+    position: fixed;
+    top: 10%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navyTheme);
+    border: 1px solid lime;
+    border-radius: 15px;
+    width: 50%;
+    z-index: 4;
+}
+
+.starter h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 25px;
+}
+
+.starter input {
+    background-color: white;
+    color: rgb(0, 0, 133);
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.starter input::placeholder {
+    color: rgba(0, 0, 133, .8);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.starter .btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+.starter .btn-container button {
+    color: rgb(0, 0, 133);
+    font-size: 1.3rem;
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    width: 20%;
+    height: 10%;
+    padding: 2% 0;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: .7s ease all;
+}
+
+.starter>button {
+    background-color: rgb(0, 163, 0);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 25%;
+    height: 10%;
+    padding: 2%;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+/* starting menu - fim */
+
+/* game over modal */
+
+body .endModal {
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navyTheme9opc);
+    border: 2px solid lime;
+    border-radius: 15px;
+    width: 50%;
+    z-index: 4;
+}
+
+.endModal button {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 0, 0, .7);
+    border: 1px solid rgb(130, 0, 0);
+    font-size: 2rem;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    margin: 15px 15px 0 0;
+    cursor: pointer;
+}
+
+.endModal h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 25px;
+}
+
+.endModal h1:nth-of-type(2) {
+    color: yellow;
+    font-size: 2.5rem;
+}
+
+.endModal h1:last-of-type {
+    color: rgb(219, 180, 180);
+    font-size: 1rem;
+}
+
+/* game over modal - fim */
+
+/* navigation bar */
+
+/* navBar Container */
+
+body nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--darkTheme);
+    box-shadow: 1px 1px 4px lime;
+    width: 100%;
+    max-height: 9%;
+    height: 100%;
+    z-index: 3;
+    transition: box-shadow ease 2s;
+}
+
+/* navBar */
+
+nav .nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+    margin-left: auto;
+    width: 100%;
+    padding: 0 2.575rem 0 0.625rem;
+    transition: all ease 1s;
+}
+
+/* Logo */
+
+nav .nav-bar .logo img {
+    max-height: 4rem;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease .3s;
+}
+
+nav .nav-bar .logo img:hover {
+    max-height: 3.5rem;
+    transition: all ease .4s;
+}
+
+/* navBar Links */
+
+nav .nav-bar a {
+    display: block;
+    flex-basis: auto;
+    color: lime;
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    height: 60%;
+    max-width: calc(100% / 5);
+    text-decoration: none;
+    transition: all ease .6s;
+}
+
+nav .nav-bar a:hover {
+    border-bottom: 2px solid limegreen;
+    border-radius: 5%;
+    padding: 10px;
+    transition: padding ease .3s;
+}
+
+nav .nav-bar a:first-child:hover {
+    border: none;
+    padding: 0px;
+}
+
+/* navigation bar - fim */
+
+/* table */
+
+.table {
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: darkgreen;
+    background-image: url(../media/tableBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px solid rgb(143, 71, 12);
+    box-shadow: 4px 4px 15px 0px black;
+    width: 70%;
+    height: 80%;
+    border-radius: 100%;
+    transition: all ease .2s;
+}
+
+/* gamemode */
+
+.table h1 {
+    position: fixed;
+    top: 20%;
+    display: flex;
+    justify-self: center;
+    color: rgba(255, 255, 255, .9);
+    max-width: 40%;
+    max-height: 30%;
+    cursor: pointer;
+}
+
+/* gamemode - fim */
+
+/* card */
+
+.table .card {
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 22%;
+    height: 55%;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: all ease .2s;
+}
+
+.table .card .card-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.table .card .card-img img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.table .card2 {
+    position: absolute;
+    top: 22%;
+    right: 15%;
+    width: 22%;
+    height: 55%;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: all ease .2s;
+}
+
+.table .card2 .card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.table .card2 .card-img img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.table .btn-container {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 60%;
+    height: 7%;
+}
+
+.table .btn-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgb(25, 25, 25);
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    transition: .7s ease all;
+}
+
+.table .btn-container button:active {
+    box-shadow: 2px 2px 8px 0px rgb(255, 255, 255);
+}
+
+/* card - fim */
+
+/* table - fim */
+
+/* player1 */
+
+.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 128, 0, .5);
+    min-width: 15vw;
+    width: 20%;
+    min-height: 15vh;
+    height: 15%;
+    border: 2px solid white;
+    transition: all ease .2s;
+}
+
+#player1 {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+}
+
+/* player2 */
+
+#player2 {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/* players name */
+
+.player h1 {
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, .8);
+    width: 100%;
+    max-height: calc(50% - 3%);
+    margin-bottom: 3%;
+}
+
+/* life monitor */
+
+.life-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    max-height: 50%;
+    transition: all ease .2s;
+}
+
+.life-container img {
+    max-height: 5rem;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease .3s;
+}
+
+/* players - fim */
+
+/* animations + independent classes */
+
+.hide {
+    display: none !important;
+}
+
+@keyframes cardEffect {
+    from {
+        left: 200%;
+    }
+    10% {
+        transform: rotate(-15deg);
+    }
+    to {
+        left: 0;
+        transform: rotate(-360deg);
+    }
+}
+
+.rotatecard {
+    -webkit-animation: cardEffect 2s infinite forwards;
+    animation: cardEffect 2s infinite forwards;
+}
+
+@keyframes deckShuffle {
+    from {
+        left: 0;
+    }
+    50% {
+        position: absolute;
+        right: -20%;
+    }
+    to {
+        position: none;
+    }
+}
+
+.shuffle {
+    -webkit-animation: deckShuffle .3s infinite forwards;
+    animation: deckShuffle .3s infinite forwards;
+}
+
+@keyframes colorFlash {
+    from {
+        background-color: rgba(255, 0, 0, .7);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, .7);
+    }
+    to {
+        background-color: rgba(255, 0, 0, .7);
+    }
+}
+
+.flash {
+    -webkit-animation: colorFlash .5s infinite forwards;
+    animation: colorFlash .5s infinite forwards;
+}
+
+@keyframes borderFlash {
+    from {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(255, 174, 0);
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+.borderFlash {
+    -webkit-animation: borderFlash 2s infinite forwards;
+    animation: borderFlash 2s infinite forwards;
+}
+
+/* animations + independent classes - fim */
+
+/* mobile */
+
+@media (max-width: 768px) {
+    /* starting menu */
+    body .starter {
+        left: 20%;
+        border: 1px solid lime;
+        width: 60%;
+    }
+    .starter h1 {
+        font-size: 1rem;
+    }
+    .starter input {
+        font-size: .8rem;
+        padding: 10px;
+        width: 70%;
+    }
+    .starter input::placeholder {
+        font-size: .8rem;
+    }
+    .starter .btn-container button {
+        font-size: .6rem;
+        border: 2px solid transparent;
+        margin-bottom: 25px;
+    }
+    .starter>button {
+        font-size: .8rem;
+        margin-bottom: 25px;
+    }
+    /* starting menu - fim */
+    /* game over modal */
+    body .endModal {
+        top: 30%;
+        left: 25%;
+        border: 1px solid lime;
+        border-radius: 10px;
+        width: 50%;
+        z-index: 4;
+    }
+    .endModal button {
+        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+        margin: 10px 10px 0 0;
+    }
+    .endModal h1 {
+        font-size: 2.5rem;
+        margin: 25px;
+    }
+    .endModal h1:nth-of-type(2) {
+        font-size: 1.25rem;
+    }
+    .endModal h1:last-of-type {
+        font-size: .6rem;
+    }
+    /* game over modal - fim */
+    /* navigation bar */
+    /* navBar Container */
+    body nav {
+        max-height: 7%;
+    }
+    /* navBar */
+    /* Logo */
+    nav .nav-bar .logo img {
+        max-height: 2rem;
+    }
+    nav .nav-bar .logo img:hover {
+        max-height: 2.5rem;
+    }
+    /* navBar Links */
+    nav .nav-bar a {
+        font-size: .9rem;
+    }
+    nav .nav-bar a:hover {
+        border-bottom: 1px solid limegreen;
+        padding: 5px;
+    }
+    /* navigation bar - fim */
+    /* table */
+    .table {
+        left: 25%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 7px solid rgb(143, 71, 12);
+        width: 50%;
+        border-radius: 0;
+    }
+    /* gamemode */
+    .table h1 {
+        position: absolute;
+        top: 2%;
+        display: flex;
+        color: rgba(255, 255, 255, .9);
+        font-size: 1.3rem;
+        max-width: auto;
+        max-height: auto;
+    }
+    /* gamemode - fim */
+    /* card */
+    .table .card {
+        position: absolute;
+        top: 10%;
+        left: 33%;
+        width: 35%;
+        height: 35%;
+    }
+    .table .card2 {
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        width: 35%;
+        height: 35%;
+    }
+    .table .btn-container {
+        bottom: 4%;
+        width: 100%;
+    }
+    .table .btn-container button {
+        font-size: 1rem;
+    }
+    /* card - fim */
+    /* table - fim */
+    /* player1 */
+    .player {
+        width: 23%;
+    }
+    #player1 {
+        position: fixed;
+        top: 9%;
+    }
+    /* player2 */
+    #player2 {
+        top: 9%;
+    }
+    /* players name */
+    .player h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10%;
+    }
+    /* life monitor */
+    .life-container {
+        max-height: 30%;
+    }
+    /* players - fim */
+    /* animations + independent classes */
+    @keyframes cardEffect {
+        from {
+            left: 0;
+            top: 115%;
+        }
+        10% {
+            transform: rotate(-15deg);
+        }
+        to {
+            top: 0;
+            transform: rotate(-360deg);
+        }
+    }
+    @keyframes deckShuffle {
+        from {
+            left: 0;
+        }
+        50% {
+            position: absolute;
+            right: -15%;
+        }
+        to {
+            position: none;
+        }
+    }
+    /* animations + independent classes - fim */
+}
+
+/* mobile - fim */

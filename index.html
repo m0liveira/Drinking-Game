@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- icon na tab do browser -->
+    <link rel="icon" href="media/cards.ico" type="image/x-icon">
+
+    <!-- title da tab -->
+    <title>Drinking Games</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- starting modal -->
+    <div id="modal" class="starter">
+        <!-- player 1 txtbox -->
+        <h1>Player 1</h1>
+        <input type="text" placeholder="Insert name of player 1" id="name1">
+
+        <!-- player 2 txtbox -->
+        <h1>Player 2</h1>
+        <input type="text" placeholder="Insert name of player 2" id="name2">
+
+        <!-- choose gamemode -->
+        <h1>Choose gamemode</h1>
+        <div class="btn-container">
+            <button id="cr">Color Riddle</button>
+            <button id="hol">Higher or Lower</button>
+            <button id="ir">In Range</button>
+            <button id="soc">Suit of Cards</button>
+        </div>
+
+        <!-- confirm button -->
+        <button id="confirm">Confirm</button>
+    </div>
+    <!-- starting modal fim -->
+
+    <!-- end game modal -->
+
+    <div id="endModal" class="endModal hide">
+        <!-- close button -->
+        <button id="close">X</button>
+
+        <!-- info sobre game over -->
+        <h1>Game Over</h1>
+        <h1 id="yGameOver"></h1>
+        <h1>Restart this mode or choose another one</h1>
+    </div>
+
+    <!-- end game modal fim -->
+
+    <!-- NavBar -->
+    <nav>
+        <div class="nav-bar">
+            <!-- logo -->
+            <a class="logo" href="#">
+                <img src="media/deck.png" alt="">
+            </a>
+
+            <!-- gamemodes -->
+            <a href="#" id="game1">Color Riddle</a>
+            <a href="#" id="game2">Higher or Lower</a>
+            <a href="#" id="game3">In Range</a>
+            <a href="#" id="game4">Suit of Cards</a>
+        </div>
+    </nav>
+    <!-- NavBar-Fim -->
+    
+    <!-- Table -->
+    <div class="table">
+        <!-- gamemode title -->
+        <h1 id="startGame">Click to start</h1>
+
+        <!-- deck de cartas -->
+        <div class="card2">
+            <div id="cardShuffle" class="card-img">
+                <img id="remaining" src="media/FullDeck.png" alt="">
+            </div>
+        </div>
+
+        <!-- cartas -->
+        <div class="card">
+            <div id="cardFx" class="card-img">
+                <img id="cardPlaced" alt="">
+            </div>
+        </div>
+
+        <!-- gamemode buttons -->
+        <div class="btn-container">
+            <button id="btn1"></button>
+            <button id="btn2"></button>
+            <button id="btn3"></button>
+            <button id="btn4"></button>
+        </div>
+
+    </div>
+    <!-- Table-Fim -->
+
+    <!-- Player 1 -->
+    <div class="player" id="player1">
+        <!-- nome do player -->
+        <h1 id="nameplate">Player 1</h1>
+
+        <!-- vidas / pontos -->
+        <div class="life-container">
+            <img id="lifePoints1" src="media/heart.png" alt="">
+            <img id="lifePoints2" src="media/heart.png" alt="">
+            <img id="lifePoints3" src="media/heart.png" alt="">
+        </div>
+    </div>
+    <!-- Player 1-Fim -->
+
+    <!-- Player 2 -->
+    <div class="player" id="player2">
+        <!-- nome do player -->
+        <h1 id="nameplate2">Player 2</h1>
+
+        <!-- vidas / pontos -->
+        <div class="life-container">
+            <img id="lifePoints4" src="media/heart.png" alt="">
+            <img id="lifePoints5" src="media/heart.png" alt="">
+            <img id="lifePoints6" src="media/heart.png" alt="">
+        </div>
+    </div>
+    <!-- Player 2-Fim -->
+
+    <!-- javascript link -->
+    <script src="script.js" async defer></script>
+</body>
+
+</html>
